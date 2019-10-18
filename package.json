@@ -1,0 +1,12 @@
+{
+  "name": "mongodb-transactions-node",
+  "version": "1.0.0",
+  "description": "Demo of ACID transactions in MongoDB",
+  "scripts": {
+  },
+  "author": "Nuri H",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.3.3"
+  }
+}
