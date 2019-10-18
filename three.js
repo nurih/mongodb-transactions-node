@@ -28,17 +28,11 @@ const client = new MongoClient(`mongodb://localhost/${dbName}?replicaSet=${replS
 
             console.log(`One ... ${insert1result.insertedId}`);
 
-            let ogg = await collection.findOne({ name: 'ogg' });
-            
-            await sleep(30000);
-
-            if (ogg) {
-                throw Error('Oh nos! Not Ogg!!!');
-            }
-
             const insert2result = await collection.insertOne({ _id: 2, name: 'kim' }, { session });
 
             console.log(`Two ... ${insert2result.insertedId}`);
+
+            await sleep(30);
 
         });
 
